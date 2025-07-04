@@ -34,4 +34,12 @@ public class UserDao {
 	public Optional<User> findById(int id) {
 	 return	userRepository.findById(id);
 	}
+
+	public List<User> searchByName(String letters) {
+		return userRepository.searchByName(letters);
+	}
+
+	public List<User> searchByEmail(String letters) {
+		return userRepository.serachByEmail(letters);
+	}
 }

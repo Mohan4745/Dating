@@ -37,4 +37,13 @@ public class UserController {
 			return userService.findMatch(id,top);
 		}
 		
+		@GetMapping("/users/search/name/{letters}")
+		public ResponseEntity<?> searchByName(@PathVariable String letters){
+			return userService.searchByName(letters);
+		}
+		
+		@GetMapping("/users/search/email/{letters}")
+		public ResponseEntity<?> searchByEmail(@PathVariable String letters){
+		return	userService.searchByEname(letters);
+		}
 }
